@@ -1,0 +1,113 @@
+Sistema: AxionPro
+Funcionalidades Atuais
+Tela de login funcional (com cadastro de usuários e permissões por perfil).
+
+Página de criação de projetos ativa.
+
+Página de upload permite escolher o projeto antes de enviar os arquivos.
+
+Relatórios de evolução por usuário com gráficos.
+
+Possibilidade de alocar projetos a usuários específicos.
+
+Ajustes Visuais
+Remover a logo atual.
+
+Substituir a cor amarela por cores neutras ou conforme sugestão.
+
+Interface deve ser limpa, com foco em usabilidade.
+
+📌 Funcionalidades a Implementar
+1. Sistema de Login e Cadastro
+Tela de login (e-mail corporativo e senha).
+
+Cadastro e edição de usuários com acesso restrito ao Administrador e Gestor.
+
+Redirecionamento de funcionalidades conforme o perfil do usuário.
+
+Permissões definidas com base no perfil.
+
+2. Criação de Projetos
+Formulário com os seguintes campos:
+
+Nome do projeto
+
+Descrição
+
+Prioridade
+
+Alocação para um ou mais usuários
+
+3. Upload de Arquivos
+Seleção de um projeto antes do envio.
+
+Suporte a arquivos .dwg e .pdf.
+
+Detecção automática de arquivos duplicados (por nome).
+
+Controle automático de versões dos arquivos.
+
+4. Relatórios de Evolução
+Painel de acompanhamento individual (por usuário).
+
+Gráficos com métricas de evolução (ex: número de arquivos enviados, aprovações, revisões).
+
+Filtros por período, projeto e status.
+
+5. Design e Interface
+Remoção da logo atual.
+
+Substituição da cor amarela por uma paleta neutra.
+
+Interface moderna, com foco em usabilidade e clareza.
+
+📂 Perfis de Usuário e Permissões
+[Administrador]
+Acesso total ao sistema.
+
+Cadastro de usuários.
+
+Definição de permissões e perfis.
+
+Criação de projetos e organização de equipes.
+
+[Gestor]
+Cadastro de usuários.
+
+Definição de permissões e perfis.
+
+Criação de projetos e equipes.
+
+Recebimento do projeto inicial.
+
+Atribuição de responsabilidades.
+
+Revisão e aprovação ou devolução dos arquivos.
+
+[Especialista]
+Definição de requisitos técnicos.
+
+Validação de normas e metodologias.
+
+[Analista / Técnico]
+Execução de levantamentos técnicos.
+
+Preparação de insumos para o projetista.
+
+[Projetista]
+Elaboração de arquivos finais (.dwg, .pdf).
+
+Anexação dos arquivos no sistema.
+
+[Gestor Final]
+Revisão das versões enviadas.
+
+Aprovação ou solicitação de ajustes.
+
+🔒 Requisitos de Acesso
+O login deve ser feito com o e-mail corporativo da empresa.
+
+Todos os cadastros de usuários devem ser feitos exclusivamente pelo Administrador ou Gestor.
+
+É necessário implementar um login de Administrador para controle geral do sistema.
+

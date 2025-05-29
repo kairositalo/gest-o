@@ -1,0 +1,167 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 210 11% 98%; /* #F5F7FA */
+  --foreground: 222 16% 9%; /* #1A1D23 */
+  --muted: 210 11% 96%; /* #F1F4F7 */
+  --muted-foreground: 215 8% 47%; /* #6B7280 */
+  --popover: 0 0% 100%; /* #FFFFFF */
+  --popover-foreground: 222 16% 9%; /* #1A1D23 */
+  --card: 0 0% 100%; /* #FFFFFF */
+  --card-foreground: 222 16% 9%; /* #1A1D23 */
+  --border: 214 13% 91%; /* #E5E7EB */
+  --input: 214 13% 91%; /* #E5E7EB */
+  --primary: 207 90% 54%; /* #2563EB */
+  --primary-foreground: 211 100% 99%; /* #F8FAFC */
+  --secondary: 210 11% 96%; /* #F1F4F7 */
+  --secondary-foreground: 222 16% 9%; /* #1A1D23 */
+  --accent: 210 11% 96%; /* #F1F4F7 */
+  --accent-foreground: 222 16% 9%; /* #1A1D23 */
+  --destructive: 0 84% 60%; /* #EF4444 */
+  --destructive-foreground: 60 9% 98%; /* #FEFEFE */
+  --ring: 207 90% 54%; /* #2563EB */
+  --radius: 0.5rem;
+  --chart-1: 207 90% 54%; /* #2563EB */
+  --chart-2: 142 76% 36%; /* #059669 */
+  --chart-3: 25 95% 53%; /* #F59E0B */
+  --chart-4: 262 83% 58%; /* #8B5CF6 */
+  --chart-5: 346 77% 49%; /* #EF4444 */
+  --sidebar-background: 0 0% 100%; /* #FFFFFF */
+  --sidebar-foreground: 222 16% 9%; /* #1A1D23 */
+  --sidebar-primary: 207 90% 54%; /* #2563EB */
+  --sidebar-primary-foreground: 211 100% 99%; /* #F8FAFC */
+  --sidebar-accent: 210 11% 96%; /* #F1F4F7 */
+  --sidebar-accent-foreground: 222 16% 9%; /* #1A1D23 */
+  --sidebar-border: 214 13% 91%; /* #E5E7EB */
+  --sidebar-ring: 207 90% 54%; /* #2563EB */
+}
+
+.dark {
+  --background: 222 16% 6%; /* #0F1419 */
+  --foreground: 210 11% 98%; /* #F5F7FA */
+  --muted: 222 16% 10%; /* #1A1D23 */
+  --muted-foreground: 215 8% 65%; /* #9CA3AF */
+  --popover: 222 16% 6%; /* #0F1419 */
+  --popover-foreground: 210 11% 98%; /* #F5F7FA */
+  --card: 222 16% 6%; /* #0F1419 */
+  --card-foreground: 210 11% 98%; /* #F5F7FA */
+  --border: 215 16% 17%; /* #374151 */
+  --input: 215 16% 17%; /* #374151 */
+  --primary: 207 90% 54%; /* #2563EB */
+  --primary-foreground: 211 100% 99%; /* #F8FAFC */
+  --secondary: 222 16% 10%; /* #1A1D23 */
+  --secondary-foreground: 210 11% 98%; /* #F5F7FA */
+  --accent: 222 16% 10%; /* #1A1D23 */
+  --accent-foreground: 210 11% 98%; /* #F5F7FA */
+  --destructive: 0 62% 30%; /* #991B1B */
+  --destructive-foreground: 210 11% 98%; /* #F5F7FA */
+  --ring: 207 90% 54%; /* #2563EB */
+  --sidebar-background: 222 16% 6%; /* #0F1419 */
+  --sidebar-foreground: 210 11% 98%; /* #F5F7FA */
+  --sidebar-primary: 207 90% 54%; /* #2563EB */
+  --sidebar-primary-foreground: 211 100% 99%; /* #F8FAFC */
+  --sidebar-accent: 222 16% 10%; /* #1A1D23 */
+  --sidebar-accent-foreground: 210 11% 98%; /* #F5F7FA */
+  --sidebar-border: 215 16% 17%; /* #374151 */
+  --sidebar-ring: 207 90% 54%; /* #2563EB */
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+/* Custom styles for file upload */
+.upload-area {
+  @apply border-2 border-dashed border-muted-foreground/25 rounded-lg p-8 text-center hover:border-primary/50 transition-colors cursor-pointer;
+}
+
+.upload-area.drag-over {
+  @apply border-primary bg-primary/5;
+}
+
+/* Status badges */
+.status-badge {
+  @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+}
+
+.status-planejamento {
+  @apply bg-gray-100 text-gray-800;
+}
+
+.status-em_andamento {
+  @apply bg-blue-100 text-blue-800;
+}
+
+.status-aguardando_revisao {
+  @apply bg-yellow-100 text-yellow-800;
+}
+
+.status-aprovado {
+  @apply bg-green-100 text-green-800;
+}
+
+.status-cancelado {
+  @apply bg-red-100 text-red-800;
+}
+
+.status-pendente {
+  @apply bg-yellow-100 text-yellow-800;
+}
+
+.status-rejeitado {
+  @apply bg-red-100 text-red-800;
+}
+
+.status-revisao {
+  @apply bg-orange-100 text-orange-800;
+}
+
+/* Priority badges */
+.priority-baixa {
+  @apply bg-gray-100 text-gray-800;
+}
+
+.priority-media {
+  @apply bg-blue-100 text-blue-800;
+}
+
+.priority-alta {
+  @apply bg-orange-100 text-orange-800;
+}
+
+.priority-critica {
+  @apply bg-red-100 text-red-800;
+}
+
+/* Role badges */
+.role-administrador {
+  @apply bg-red-100 text-red-800;
+}
+
+.role-gestor {
+  @apply bg-orange-100 text-orange-800;
+}
+
+.role-especialista {
+  @apply bg-blue-100 text-blue-800;
+}
+
+.role-analista {
+  @apply bg-green-100 text-green-800;
+}
+
+.role-projetista {
+  @apply bg-purple-100 text-purple-800;
+}
+
+.role-gestor_final {
+  @apply bg-indigo-100 text-indigo-800;
+}
